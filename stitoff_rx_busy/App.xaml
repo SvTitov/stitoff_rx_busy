@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="stitoff_rx_busy.App">
+    <Application.Resources>
+        <ControlTemplate x:Key="BusyTemplate">
+            <Grid>
+                <ContentPresenter/>
+                <Grid BackgroundColor="Black" Opacity="0.5"
+                      IsVisible="{TemplateBinding BindingContext.IsBusy}">
+                    <ActivityIndicator
+                        Color="Red"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        IsRunning="True"/>
+                </Grid>
+            </Grid>
+        </ControlTemplate>
+    </Application.Resources>
+</Application>

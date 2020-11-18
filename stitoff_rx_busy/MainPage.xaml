@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="stitoff_rx_busy.MainPage"
+             ControlTemplate="{StaticResource BusyTemplate}">
+    <StackLayout Spacing="5">
+        <Frame BackgroundColor="#2196F3"
+               Padding="24"
+               CornerRadius="0">
+            <Label Text="RX" VerticalOptions="Center"
+                   HorizontalOptions="Center"
+                   TextColor="White"
+                   FontSize="26"/>
+        </Frame>
+        <Frame
+            BorderColor="LightGray"
+            Margin="20"
+            HasShadow="False" >
+            <Editor
+                Placeholder="Empty..."
+                Text="{Binding Content}"
+                IsReadOnly="True"
+                AutoSize="TextChanges"/>
+        </Frame>
+  
+        <Button Command="{Binding DownloadCommand}"
+                Text="Load"/>
+
+         <Button Command="{Binding DownloadRxCommand}"
+                Text="Load Rx"/>
+    </StackLayout>
+</ContentPage>
